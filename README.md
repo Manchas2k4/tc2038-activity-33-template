@@ -1,8 +1,8 @@
 ![Tec de Monterrey](images/logotecmty.png)
-# Actividad 3.2 Implementación de "Dijkstra and Floyd"
+# Actividad 3.3 Implementación de "Knapsack problem"
 
 ## <span style="color: rgb(26, 99, 169);">¿Qué tengo que hacer?</span>
-Accede a la siguiente liga: [Actividad Integradora 1](https://classroom.github.com/a/n5fs_Sy0) y acepta la tarea. Esto creará tu repositorio de trabajo. En él, encontrarás el archivo "main.cpp". En este archivo deberás desarrollar la implementación del problema presentado en esta actividad.  En la parte superior del archivo coloca, en comentarios, tus datos. Por
+En este repositorio encontrarás el archivo "main.cpp". En este archivo deberás desarrollar la implementación del problema presentado en esta actividad.  En la parte superior del archivo coloca, en comentarios, tus datos. Por ejemplo:
 ```
 // =========================================================
 // File: main.cpp
@@ -12,47 +12,34 @@ Accede a la siguiente liga: [Actividad Integradora 1](https://classroom.github.c
 // Date: 01/01/2021
 // =========================================================
 ```
-Implementa, <span style="text-decoration-line: underline;">en equipos de 2 personas (máximo)</span>, una solución para el problema que se describe a continuación.
+Implementa, <span style="text-decoration-line: underline;">en equipos de 2 personas (máximo)</span>, una solución para el problema que se describe a continuación. El problema fue tomado del siguiente sitio: [10664 Luggage](https://onlinejudge.org/external/106/10664.pdf).
 
 ## <span style="color: rgb(26, 99, 169);">**Descripción**</span>
-Desarrolla un programa en C++ que implementa los algoritmos de Dijkstra y Floyd para encontrar la distancia más corta entre un par de vértices en un grado dirigido.
+Peter y sus amigos están de vacaciones, por lo que han decidido hacer un viaje en coche para conocer el norte de España. Son siete personas y piensan que dos coches son suficientes para su equipaje.
+
+Es hora de irse ... y un montón de maletas esperan fuera de los autos. Los conductores no se ponen de acuerdo sobre qué maleta se debe meter en cada maletero, porque nadie quiere que un maletero cargue más peso que el otro. ¿Es posible que las dos botas carguen con el mismo peso? (¡Obviamente sin desempacar las maletas!)
+
+Considere m conjuntos de números que representan el peso de las maletas, debe decidir para cada uno, si es posible distribuir las maletas en los maleteros, y los dos maleteros pesan lo mismo.
 
 ## <span style="color: rgb(26, 99, 169);">**Entrada**</span>
-El programa recibe un número entero, *N*, seguido de *N* x *N* valores enteros que representan una matriz de adyacencia de un grafo dirigido. El primer número, *N*, representa el número de nodos. Los siguientes valores representan los valores en la matriz. El valor en la posición ()*i*, *j*) representa el peso del arco del nodo *i* al nodo *j*. Si no hay un arco entre el nodo *i* y el nodo *j*¨, el valor en la matriz será -1.
+La primera línea de la entrada contiene un número entero, *m*, que indica el número de casos de prueba. Para cada caso de prueba, hay una línea que contiene *n* números enteros (1 <= *n* <= 20) separados por espacios simples. Estos números enteros son los pesos de cada maleta. La suma total de los pesos de todas las maletas es menor o igual a 200 kilogramos.
 
 ## <span style="color: rgb(26, 99, 169);">**Salida**</span>
-La salida del programa es, primerocon el resultado del algoritmo de Dijkstra, la distancia del nodo *i* al nodo *j* para todos los nodos. A continuación, se debe mostrar la matriz resultado del algoritmo de Flyod.
+La salida consta de m líneas. La *i*-ésima línea corresponde al *i*-ésimo conjunto de peso de maletas y contiene la cadena "YES" o "NO", dependiendo de la posibilidad de que los dos maleteros carguen con el mismo peso para el caso de prueba respectivo.
 
 ## <span style="color: rgb(26, 99, 169);">**Ejemplo de entrada**</span>
 ```
-4
-0 2 -1 3
--1 0 1 5
-2 3 0 -1
-3 -1 4 0
+3
+1 2 1 2 1
+2 3 4 1 2 5 10 50 3 50
+3 5 2 7 1 7 5 2 8 9 1 25 15 8 3 1 38 45 8 1
 ```
 
 ## <span style="color: rgb(26, 99, 169);">**Ejemplo de salida**</span>
 ```
-Dijkstra :
-node 1 to node 2 : 2
-node 1 to node 3 : 3
-node 1 to node 4 : 3
-node 2 to node 1 : 3
-node 2 to node 3 : 1
-node 2 to node 4 : 5
-node 3 to node 1 : 2
-node 3 to node 2 : 3
-node 3 to node 4 : 5
-node 4 to node 1 : 3
-node 4 to node 2 : 5
-node 4 to node 3 : 4
-
-Floyd :
-0 2 3 3
-3 0 1 5
-2 3 0 5
-3 5 4 0
+NO
+YES
+YES
 
 ```
 
